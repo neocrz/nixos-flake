@@ -33,6 +33,7 @@
           };
         modules = [
           ./host/acer/configuration.nix
+          ./home/acer/conf.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
