@@ -4,7 +4,7 @@ let
 in
 {
   home = {
-    username = name;
+    #username = name;
     #homeDirectory = "/home/${name}";
     stateVersion = "23.05";
     sessionPath = [
