@@ -37,6 +37,15 @@ in
     home-manager.enable = true;
   };
 
-  
+  nixpkgs.overlays = [
+      #steam
+      (final: prev: {
+        steam = prev.steam.override ({ extraPkgs ? pkgs': [], ... }: {
+          extraPkgs = pkgs': (extraPkgs pkgs') ++ (with pkgs'; [
+            libgdiplus
+          ]);
+        });
+      })
+    ];
 
 }
