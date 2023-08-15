@@ -22,12 +22,12 @@ in
 
 
   imports = [ 
-    ./modules
+    #./modules
     ../../common/modules
   ];
 
   modules = {
-    git.enable=true;
+    #git.enable=true;
     packages.enable=true;
   };
   
