@@ -101,9 +101,7 @@ in
     isNormalUser = true;
     description = user;
     extraGroups = [ "networkmanager" "docker" "wheel" "libvirtd" ];
-    packages = with pkgs; [
-      firefox
-      
+    packages = with pkgs; [ 
     #  thunderbird
     ];
   };

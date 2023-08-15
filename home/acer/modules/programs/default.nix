@@ -10,12 +10,8 @@ in {
         # cli
 
         android-tools
-        neofetch
-        yt-dlp
         xclip
-        cmake
-        gnumake
-        gcc
+        
         mpv
 
         # gui
@@ -30,14 +26,15 @@ in {
         qutebrowser
         figma-linux
         # gnome.nautilus
+        gnome.zenity
+        gnome.gnome-tweaks
+        # gnome.eog
+        # gnome.gedit
         libreoffice-qt
         tdesktop
         vlc
         # virtualization 
         # distrobox xorg.xhost
-
-        wget curl
-	      openssh
 
         # games
         grapejuice
