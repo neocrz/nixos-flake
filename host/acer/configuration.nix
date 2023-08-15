@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 let
   user = "eee";
   hostname = "nixos";
@@ -153,17 +153,6 @@ in
     };
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:2:0:0";
-  };
-
-  # boot option for nvidia on external display
-  specialisation = {
-    external-display.configuration = {
-      system.nixos.tags = [ "external-display" ];
-      hardware.nvidia = {
-        prime.offload.enable = lib.mkForce false;
-        powerManagement.enable = lib.mkForce false;
-      };
-    };
   };
 
   environment.sessionVariables = rec {
