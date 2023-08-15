@@ -29,7 +29,7 @@ in
     git.enable=true;
     bash.enable=true;
     programs.enable=true;
-    vscode.enable=false;
+    vscode.enable=true;
   };
 
   programs = {
