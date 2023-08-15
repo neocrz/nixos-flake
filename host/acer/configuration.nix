@@ -147,7 +147,10 @@ in
   services.xserver.videoDrivers = [ "intel" "nvidia" ]; 
   hardware.opengl.enable = true;
   hardware.nvidia.prime = {
-    offload.enable = true;
+    offload = {
+      enable = true;
+      enableOffloadCmd = true;
+    };
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:2:0:0";
   };
