@@ -6,7 +6,7 @@ let cfg = config.modules.programs;
 in {
     options.modules.programs = { enable = mkEnableOption "programs"; };
     config = mkIf cfg.enable {
-      home.packages = with pkgs; [
+      home.packages = (with pkgs; [
         # cli
 
         android-tools
@@ -25,11 +25,6 @@ in {
         firefox
         qutebrowser
         figma-linux
-        # gnome.nautilus
-        gnome.zenity
-        gnome.gnome-tweaks
-        # gnome.eog
-        # gnome.gedit
         libreoffice-qt
         tdesktop
         vlc
@@ -40,6 +35,12 @@ in {
         grapejuice
         golly
         lutris
-	    ];
+	    ]) ++ (with pkgs.gnome; [ 
+        nautilus
+        zenity
+        gnome-tweaks
+        eog
+        gedit
+      ]);
     };
 }
