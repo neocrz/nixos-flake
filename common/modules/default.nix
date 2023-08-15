@@ -4,5 +4,6 @@
   imports = [
     ./git
     ./bash
+    ./packages
   ];
 }
