@@ -27,7 +27,7 @@ Clone the repo and `cd` to the repository folder.
 sudo nix-on-droid -F . switch
 ```
 
-## OBS
+## Observations...
 ### Modules `programs` and `packages`
 #### `packages`
 loc: commons. packages for all hosts
