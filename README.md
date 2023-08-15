@@ -1,4 +1,5 @@
-Flake from my NixOS system.
+# NixOS - Flake
+Flake from my NixOS, Nix, nix-on-droid systems.
 
 ## My Hosts:
 - `acer` my notebook
