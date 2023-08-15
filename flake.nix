@@ -16,6 +16,13 @@
   };
 
   outputs = { self, nixpkgs, home-manager, nix-on-droid, ... }@inputs: {
+    nixpkgs = {
+      config = {
+        allowUnfree = true;
+        allowUnfreePredicate = (_: true);
+      };
+    };
+
     nixosConfigurations = {
       acer = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
