@@ -155,6 +155,17 @@ in
     nvidiaBusId = "PCI:2:0:0";
   };
 
+  # boot option for nvidia on external display
+  specialisation = {
+    external-display.configuration = {
+      system.nixos.tags = [ "external-display" ];
+      hardware.nvidia = {
+        prime.offload.enable = lib.mkForce false;
+        powerManagement.enable = lib.mkForce false;
+      };
+    };
+  };
+
   environment.sessionVariables = rec {
     XDG_CACHE_HOME  = "\${HOME}/.cache";
     XDG_CONFIG_HOME = "\${HOME}/.config";
