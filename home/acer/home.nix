@@ -21,12 +21,12 @@ in
   };
 
   imports = [ 
-    #./modules
-    ../../common/modules
+    ./modules
+    ../../common/modules/default.nix
   ];
 
   modules = {
-    #git.enable=true;
+    git.enable=true;
     packages.enable=true;
   };
 

@@ -1,10 +1,10 @@
 { pkgs, lib, config, ... }:
 
 with lib;
-let cfg = config.modules.packages;
+let cfg = config.modules.programs;
 
 in {
-    options.modules.packages = { enable = mkEnableOption "packages"; };
+    options.modules.programs = { enable = mkEnableOption "programs"; };
     config = mkIf cfg.enable {
       home.packages = with pkgs; [
         # cli

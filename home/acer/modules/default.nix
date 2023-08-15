@@ -2,5 +2,7 @@
 
 {
   imports = [
+    ./programs
+    ./git
   ];
 }
