@@ -8,8 +8,8 @@ in {
     config = mkIf cfg.enable {
       home.packages = with pkgs; [
         # cli
+
         android-tools
-        bat fd ripgrep
         neofetch
         yt-dlp
         xclip

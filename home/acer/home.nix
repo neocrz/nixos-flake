@@ -28,6 +28,7 @@ in
   modules = {
     git.enable=true;
     bash.enable=true;
+    packages.enable=true;
     programs.enable=true;
     vscode.enable=true;
   };
