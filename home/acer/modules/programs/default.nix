@@ -29,7 +29,6 @@ in {
         libreoffice-qt
         tdesktop
         vlc
-        xpdf
         # virtualization 
         # distrobox xorg.xhost
 
