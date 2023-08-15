@@ -14,6 +14,7 @@ in {
         kitty_ctheme = "kitty +kitten themes";
         mp4 = "yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4";
       };
+      # source my manual config
       bashrcExtra = ''
         . ~/.config/.mybashrc
       '';
