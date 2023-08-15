@@ -2,14 +2,14 @@
 Flake from my NixOS, Nix, nix-on-droid systems.
 
 ## My Hosts:
-- `acer` my notebook
-- `droid` nix-on-droid on my Xiaomi Mi9 (cepeus)
+- `acer` [NixOS](https://nixos.org/) on my notebook.
+- `droid` [nix-on-droid](https://github.com/t184256/nix-on-droid) on my Xiaomi Mi9 (cepheus).
 
 ## How to
 ### Run `acer` (NixOS)
 Must have flakes active.
 
-Clone the repo. `cd` to the repository
+Clone the repo and `cd` to the repository folder.
 
 `configuration.nix` and `hardware-configuration.nix` in `./host/acer` folder
 
@@ -19,9 +19,10 @@ sudo nixos-rebuild --flake .#acer switch
 ### Run `droid` (nix-on-droid)
 Must have nix-on-droid with flakes enabled.
 
-`nix-on-droid.nix` in `./host/droid` folder
+Clone the repo and `cd` to the repository folder.
 
-Clone the repo. `cd` to the repository
+`nix-on-droid.nix` in `./host/droid` folder.
+
 ```console
 sudo nix-on-droid -F . switch
 ```
