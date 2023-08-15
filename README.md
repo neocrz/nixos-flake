@@ -19,3 +19,10 @@ Clone the repo. `cd` the repository
 ```console
 sudo nix-on-droid -F . switch
 ```
+
+## OBS
+### Module `programs` and `packages`
+#### `packages`
+loc: commons. packages for all hosts
+#### `programs`
+loc: host's home. packages for the host
