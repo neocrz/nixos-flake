@@ -30,7 +30,7 @@
           {
             home-manager = {
               useUserPackages = true;
-              useGlobalPkgs = false; #true
+              useGlobalPkgs = true; #true
               extraSpecialArgs = {inherit inputs;};
               users.eee = import ./home/acer/home.nix;
             };
