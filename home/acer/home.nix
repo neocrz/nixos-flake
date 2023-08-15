@@ -23,6 +23,12 @@ in
   imports = [ 
     ./modules
     ../../common/modules/default.nix
+    (
+      home.file.".config/.mybashrc" = {
+      source = ./src/mybashrc;
+      recursive = true;
+      }
+    )
   ];
 
   modules = {
