@@ -28,6 +28,7 @@ in
 
   modules = {
     git.enable=true;
+    packages.enable=true;
   };
   
   programs = {
