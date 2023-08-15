@@ -6,6 +6,13 @@
 let
   user = "eee";
   hostname = "nixos";
+  nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
+    export __NV_PRIME_RENDER_OFFLOAD=1
+    export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
+    export __GLX_VENDOR_LIBRARY_NAME=nvidia
+    export __VK_LAYER_NV_optimus=NVIDIA_only
+    exec "$@"
+  '';
 in
 {
   imports =
@@ -93,7 +100,7 @@ in
   users.users.${user} = {
     isNormalUser = true;
     description = user;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "docker" "wheel" "libvirtd" ];
     packages = with pkgs; [
       firefox
       
@@ -107,8 +114,8 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    virt-manager
+    nvidia-offload
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -122,7 +129,7 @@ in
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -130,12 +137,33 @@ in
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+  # Docker
+  virtualisation.docker.enable = true;
+  
+  # Libvirtd
+  virtualisation.libvirtd.enable = true;
+  programs.dconf.enable = true;
+
+  services.xserver.videoDrivers = [ "intel" "nvidia" ]; 
+  hardware.opengl.enable = true;
+  hardware.nvidia.prime = {
+    offload.enable = true;
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:2:0:0";
+  };
+
+  environment.sessionVariables = rec {
+    XDG_CACHE_HOME  = "\${HOME}/.cache";
+    XDG_CONFIG_HOME = "\${HOME}/.config";
+    XDG_BIN_HOME    = "\${HOME}/.local/bin";
+    XDG_DATA_HOME   = "\${HOME}/.local/share";
+    DOT_FILES = "\${HOME}/.dotfiles";
+    NIXOS_CONFIG = "${DOT_FILES}/system/acer/configuration.nix";
+  };
+
+  # to nautilus work
+  services.gvfs.enable = true;
+  
   system.stateVersion = "23.05"; # Did you read the comment?
 
 }

@@ -27,6 +27,7 @@ in
 
   modules = {
     git.enable=true;
+    bash.enable=true;
     programs.enable=true;
   };
 
