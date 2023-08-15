@@ -28,7 +28,8 @@ in {
         qbittorrent
         firefox
         qutebrowser
-        gnome.nautilus
+        figma-linux
+        # gnome.nautilus
         libreoffice-qt
         tdesktop
         vlc
