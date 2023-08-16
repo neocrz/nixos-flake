@@ -17,12 +17,14 @@ in {
         discord
         figma-linux #design
         firefox
+        genymotion #dev
         gh #github-cli
         glmark2
         gimp
         inkscape #design
         libreoffice-qt
         lmms
+        love #dev
         metabase #powerbi alt.
         obs-studio #rec
         obsidian #note
