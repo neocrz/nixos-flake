@@ -21,10 +21,6 @@ in {
         zoxide # cd alt
         unzip
 
-        # dev
-        cmake
-        gnumake
-        gcc
 	    ];
     };
 }

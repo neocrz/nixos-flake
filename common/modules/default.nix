@@ -5,5 +5,6 @@
     ./git
     ./bash
     ./packages
+    ./dev
   ];
 }

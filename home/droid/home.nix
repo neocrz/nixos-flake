@@ -39,6 +39,7 @@ in
     bash.enable=true;
     packages.enable=true;
     programs.enable=true;
+    dev.enable=true;
   };
   
   programs = {

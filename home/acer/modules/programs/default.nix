@@ -7,15 +7,10 @@ in {
     options.modules.programs = { enable = mkEnableOption "programs"; };
     config = mkIf cfg.enable {
       home.packages = (with pkgs; [
-        #DS
-        metabase
-
-        # CLI
+        
         android-tools
         xclip
         mpv
-
-        # GUI
         android-studio
         blender
         calibre
@@ -23,6 +18,7 @@ in {
         glmark2
         gimp
         lmms
+        metabase #powerbi alt.
         obs-studio
         obsidian
         qbittorrent
@@ -31,6 +27,8 @@ in {
         figma-linux
         libreoffice-qt
         tdesktop
+        thunderbird
+        typst
         vlc
         # virtualization 
         # distrobox xorg.xhost
@@ -64,6 +62,8 @@ in {
           ];
         })
 
+        
+        gnomeExtensions.gsconnect
 	    ]) ++ (with pkgs.gnome; [ 
         nautilus
         zenity

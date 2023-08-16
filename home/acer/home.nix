@@ -23,6 +23,7 @@ in
   imports = [ 
     ./modules
     ../../common/modules
+    # ../../common/modules/dev
 
     ( _:{ # copy my bashrc to be sourced
       home.file.".config/.mybashrc" = {
@@ -39,6 +40,7 @@ in
     packages.enable=true;
     programs.enable=true;
     vscode.enable=true;
+    dev.enable=true;
   };
 
   programs = {
