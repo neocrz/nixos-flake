@@ -7,12 +7,16 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
   nixpkgs.overlays = [
-      (final: prev: {
-        steam = prev.steam.override ({ extraPkgs ? pkgs': [], ... }: {
-          extraPkgs = pkgs': (extraPkgs pkgs') ++ (with pkgs'; [
-            libgdiplus
-          ]);
-        });
-      })
-    ];
+    (final: prev: {
+      steam = prev.steam.override ({ extraPkgs ? pkgs': [], ... }: {
+        extraPkgs = pkgs': (extraPkgs pkgs') ++ (with pkgs'; [
+          libgdiplus
+        ]);
+      });
+    })
+  ];
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "python-2.7.18.6"
+  ];
 }

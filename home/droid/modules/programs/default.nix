@@ -7,7 +7,7 @@ in {
     options.modules.programs = { enable = mkEnableOption "programs"; };
     config = mkIf cfg.enable {
       home.packages = with pkgs; [
- 
+        
 	    ];
     };
 }

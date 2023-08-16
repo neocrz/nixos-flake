@@ -17,9 +17,12 @@ in {
 
         # GUI
         android-studio
+        blender
         calibre
         discord
         glmark2
+        gimp
+        lmms
         obs-studio
         obsidian
         qbittorrent
