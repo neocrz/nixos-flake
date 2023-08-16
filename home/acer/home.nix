@@ -23,9 +23,8 @@ in
   imports = [ 
     ./modules
     ../../common/modules
-    # ../../common/modules/dev
 
-    ( _:{ # copy my bashrc to be sourced
+    ( _:{ # copy mybashrc to be sourced
       home.file.".config/.mybashrc" = {
       source = ./src/mybashrc;
       recursive = true;

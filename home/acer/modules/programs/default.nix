@@ -11,28 +11,31 @@ in {
         android-tools
         xclip
         mpv
-        android-studio
+        android-studio #dev
         blender
         calibre
         discord
-        figma-linux
+        figma-linux #design
         firefox
+        gh #github-cli
         glmark2
         gimp
-        inkscape
+        inkscape #design
         libreoffice-qt
         lmms
         metabase #powerbi alt.
-        obs-studio
-        obsidian
+        obs-studio #rec
+        obsidian #note
         openshot-qt #video
         qbittorrent
         qutebrowser
+        scrcpy #phone screen
         shotcut #video
         tdesktop
         thunderbird
         typst
         vlc
+        wineWowPackages.stable
         woeusb-ng
         # virtualization 
         # distrobox xorg.xhost
