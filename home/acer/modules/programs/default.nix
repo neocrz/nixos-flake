@@ -7,7 +7,7 @@ in {
     options.modules.programs = { enable = mkEnableOption "programs"; };
     config = mkIf cfg.enable {
       home.packages = (with pkgs; [
-        
+        audacity
         android-tools
         xclip
         mpv
@@ -15,17 +15,20 @@ in {
         blender
         calibre
         discord
+        figma-linux
+        firefox
         glmark2
         gimp
+        inkscape
+        libreoffice-qt
         lmms
         metabase #powerbi alt.
         obs-studio
         obsidian
+        openshot-qt #video
         qbittorrent
-        firefox
         qutebrowser
-        figma-linux
-        libreoffice-qt
+        shotcut #video
         tdesktop
         thunderbird
         typst

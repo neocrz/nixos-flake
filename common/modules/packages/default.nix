@@ -11,6 +11,7 @@ in {
         bat
         exa # ls alt
         fd # find alt
+        ffmpeg
         htop
         nano
         neofetch
