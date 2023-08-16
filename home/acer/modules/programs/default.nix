@@ -33,6 +33,7 @@ in {
         thunderbird
         typst
         vlc
+        woeusb-ng
         # virtualization 
         # distrobox xorg.xhost
 

@@ -16,6 +16,7 @@ in {
         nano
         neofetch
         ripgrep # grep alt
+        openssl_legacy
 	      openssh
         yt-dlp
         wget curl
