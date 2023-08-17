@@ -18,7 +18,6 @@ in {
         figma-linux #design
         firefox
         genymotion #dev
-        gh #github-cli
         glmark2
         gimp
         inkscape #design

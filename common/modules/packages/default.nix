@@ -9,10 +9,10 @@ in {
       home.packages = with pkgs; [
         # tools
         bat
-        blesh
         exa # ls alt
         fd # find alt
         ffmpeg
+        gh #github-cli
         htop
         nano
         neofetch
