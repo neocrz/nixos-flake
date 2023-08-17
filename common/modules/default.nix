@@ -2,9 +2,12 @@
 
 {
   imports = [
-    ./git
     ./bash
-    ./packages
     ./dev
+    ./fonts
+    ./git
+    ./nano
+    ./packages
+    ./tmux
   ];
 }

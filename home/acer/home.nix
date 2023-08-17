@@ -26,7 +26,7 @@ in
 
     ( _:{ # copy mybashrc to be sourced
       home.file.".config/.mybashrc" = {
-      source = ./src/mybashrc;
+      source = ./src/.bashrc;
       recursive = true;
       };
       }
@@ -34,12 +34,16 @@ in
   ];
 
   modules = {
-    git.enable=true;
     bash.enable=true;
+    fonts.enable=true;
+    git.enable=true;
     packages.enable=true;
     programs.enable=true;
     vscode.enable=true;
     dev.enable=true;
+    nano.enable=true;
+    kitty.enable=true;
+    tmux.enable=true;
   };
 
   programs = {

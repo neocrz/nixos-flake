@@ -35,11 +35,14 @@ in
   ];
 
   modules = {
-    git.enable=true;
     bash.enable=true;
+    fonts.enable=true;
+    git.enable=true;
     packages.enable=true;
     programs.enable=true;
     dev.enable=true;
+    nano.enable=true;
+    tmux.enable=true;
   };
   
   programs = {
