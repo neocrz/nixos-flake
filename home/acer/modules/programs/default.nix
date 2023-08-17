@@ -23,6 +23,7 @@ in {
         inkscape #design
         krita
         libreoffice-qt
+        librewolf
         lmms
         love #dev
         metabase #powerbi alt.

@@ -35,15 +35,16 @@ in
 
   modules = {
     bash.enable=true;
+    dev.enable=true;
     fonts.enable=true;
     git.enable=true;
+    kitty.enable=true;
+    nano.enable=true;
+    nvim.enable=true;
     packages.enable=true;
     programs.enable=true;
-    vscode.enable=true;
-    dev.enable=true;
-    nano.enable=true;
-    kitty.enable=true;
     tmux.enable=true;
+    vscode.enable=true;
   };
 
   programs = {

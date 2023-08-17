@@ -38,10 +38,11 @@ in
     bash.enable=true;
     fonts.enable=true;
     git.enable=true;
-    packages.enable=true;
-    programs.enable=true;
     dev.enable=true;
     nano.enable=true;
+    nvim.enable=true;
+    packages.enable=true;
+    programs.enable=true;
     tmux.enable=true;
   };
   

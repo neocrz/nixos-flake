@@ -7,6 +7,7 @@
     ./fonts
     ./git
     ./nano
+    ./nvim
     ./packages
     ./tmux
   ];
