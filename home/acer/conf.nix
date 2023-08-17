@@ -26,4 +26,6 @@
    # networking.firewall.enable = false;
 
   networking.nameservers = [ "8.8.8.8" "8.8.4.4" ];
+
+  programs.bash.blesh.enable = true;
 }

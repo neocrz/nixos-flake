@@ -17,5 +17,8 @@ in {
         . ~/.config/.mybashrc
       '';
     };
+
+    
+    
   };
 }

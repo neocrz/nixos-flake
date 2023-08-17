@@ -22,6 +22,7 @@ in {
         glmark2
         gimp
         inkscape #design
+        krita
         libreoffice-qt
         lmms
         love #dev
