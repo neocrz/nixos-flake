@@ -1,4 +1,7 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
+let
+  system = "x86_64-linux";
+in
 {
   # steam
   programs.steam = {
@@ -27,4 +30,7 @@
 
   networking.nameservers = [ "8.8.8.8" "8.8.4.4" ];
 
+  environment.systemPackages = with pkgs; [
+    inputs.nix-software-center.packages.${system}.nix-software-center
+  ];
 }

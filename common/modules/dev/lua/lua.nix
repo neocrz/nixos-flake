@@ -1,8 +1,8 @@
 # structure credits: github.com/novafacing
 # basic generation: luarocks nix ...
-{pkgs, lib, stdenv, fetchurl, fetchgit, fetchzip, lua52Packages, ... }:
+{pkgs, lib, stdenv, fetchurl, fetchgit, fetchzip, lua51Packages, ... }:
 let
-  ansicolors = lua52Packages.buildLuarocksPackage {
+  ansicolors = lua51Packages.buildLuarocksPackage {
     pname = "ansicolors";
     version = "1.0.2-3";
     knownRockspec = (fetchurl {
@@ -14,7 +14,7 @@ let
       sha256 = "0r4xi57njldmar9pn77l0vr5701rpmilrm51spv45lz0q9js8xps";
     };
 
-    propagatedBuildInputs = with pkgs; [ lua ];
+    propagatedBuildInputs = with pkgs; [ lua5_1 ];
 
     meta = {
       homepage = "https://github.com/kikito/ansicolors.lua";
@@ -22,7 +22,7 @@ let
       license.fullName = "MIT <http://opensource.org/licenses/MIT>";
     };
   };
-  argparse = lua52Packages.buildLuarocksPackage {
+  argparse = lua51Packages.buildLuarocksPackage {
     pname = "argparse";
     version = "0.7.1-1";
     knownRockspec = (fetchurl {
@@ -35,7 +35,7 @@ let
     };
 
     #disabled = (luaOlder "5.1") || (luaAtLeast "5.5");
-    propagatedBuildInputs = with pkgs; [ lua ];
+    propagatedBuildInputs = with pkgs; [ lua5_1 ];
 
     meta = {
       homepage = "https://github.com/luarocks/argparse";
@@ -43,7 +43,7 @@ let
       license.fullName = "MIT";
     };
   };
-  date = lua52Packages.buildLuarocksPackage {
+  date = lua51Packages.buildLuarocksPackage {
     pname = "date";
     version = "2.2-2";
     knownRockspec = (fetchurl {
@@ -64,7 +64,7 @@ let
     '') ["date" "path"]) ;
 
     # disabled = (luaOlder "5.0") || (luaAtLeast "5.5");
-    propagatedBuildInputs = with pkgs; [ lua ];
+    propagatedBuildInputs = with pkgs; [ lua5_1 ];
 
     meta = {
       homepage = "https://github.com/Tieske/date";
@@ -73,7 +73,7 @@ let
     };
     
   };
-  etlua = lua52Packages.buildLuarocksPackage {
+  etlua = lua51Packages.buildLuarocksPackage {
     pname = "etlua";
     version = "1.3.0-1";
     knownRockspec = (fetchurl {
@@ -94,7 +94,7 @@ let
     '') ["date" "path"]) ;
 
     # disabled = (luaOlder "5.1");
-    propagatedBuildInputs = with pkgs; [ lua ];
+    propagatedBuildInputs = with pkgs; [ lua5_1 ];
 
     meta = {
       homepage = "https://github.com/leafo/etlua";
@@ -102,7 +102,7 @@ let
       license.fullName = "MIT";
     };
   };
-  loadkit = lua52Packages.buildLuarocksPackage {
+  loadkit = lua51Packages.buildLuarocksPackage {
     pname = "loadkit";
     version = "1.1.0-1";
     knownRockspec = (fetchurl {
@@ -122,7 +122,7 @@ let
     }
     '') ["date" "path"]) ;
 
-    propagatedBuildInputs = with pkgs; [ lua ];
+    propagatedBuildInputs = with pkgs; [ lua5_1 ];
 
     meta = {
       homepage = "https://github.com/leafo/loadkit";
@@ -131,7 +131,7 @@ let
     };
 
   };
-  lpeg = lua52Packages.buildLuarocksPackage {
+  lpeg = lua51Packages.buildLuarocksPackage {
     pname = "lpeg";
     version = "1.0.2-1";
 
@@ -143,7 +143,7 @@ let
       url    = "http://www.inf.puc-rio.br/~roberto/lpeg/lpeg-1.0.2.tar.gz";
       sha256 = "1zjzl7acvcdavmcg5l7wi12jd4rh95q9pl5aiww7hv0v0mv6bmj8";
     };
-    propagatedBuildInputs = with pkgs; [ lua ];
+    propagatedBuildInputs = with pkgs; [ lua5_1 ];
 
     meta = with lib; {
       homepage = "http://www.inf.puc-rio.br/~roberto/lpeg.html";
@@ -151,7 +151,7 @@ let
       license.fullName = "MIT/X11";
     };
   };
-  lua-cjson = lua52Packages.buildLuarocksPackage {
+  lua-cjson = lua51Packages.buildLuarocksPackage {
     pname = "lua-cjson";
     version = "2.1.0-1";
 
@@ -170,7 +170,7 @@ let
     };
 
     dontStrip = true;
-    propagatedBuildInputs = with pkgs; [ lua ];
+    propagatedBuildInputs = with pkgs; [ lua5_1 ];
 
     meta = with lib; {
       homepage = "http://www.kyne.com.au/~mark/software/lua-cjson.php";
@@ -178,7 +178,7 @@ let
       license.fullName = "MIT";
     };
   };
-  luaossl = lua52Packages.buildLuarocksPackage {
+  luaossl = lua51Packages.buildLuarocksPackage {
     pname = "luaossl";
     version = "20220711-0";
     knownRockspec = (fetchurl {
@@ -190,7 +190,7 @@ let
       sha256 = "1a9pgmc6fbhgh1m9ksz9fq057yzz46npqgakcsy9vngg47xacfdb";
     };
     buildInputs = with pkgs; [ openssl.dev ];
-    propagatedBuildInputs = with pkgs; [ lua openssl.dev ];
+    propagatedBuildInputs = with pkgs; [ lua5_1 openssl.dev ];
     dontStrip = true;
 
     meta = {
@@ -210,7 +210,7 @@ let
     };
 
   };
-  luabitop = lua52Packages.buildLuarocksPackage {
+  luabitop = lua51Packages.buildLuarocksPackage {
     pname = "luabitop";
     version = "1.0.2-3";
 
@@ -229,7 +229,7 @@ let
       }
     '') ["date"]) ;
 
-    propagatedBuildInputs = with pkgs; [ lua ];
+    propagatedBuildInputs = with pkgs; [ lua5_1 ];
 
     meta = with lib; {
       homepage = "http://bitop.luajit.org/";
@@ -239,7 +239,7 @@ let
   };
 in
 let
-  pgmoon = lua52Packages.buildLuarocksPackage {
+  pgmoon = lua51Packages.buildLuarocksPackage {
     pname = "pgmoon";
     version = "1.16.0-1";
     knownRockspec = (fetchurl {
@@ -259,7 +259,7 @@ let
     }'') ["date" "path"]) ;
 
     #disabled = (luaOlder "5.1");
-    propagatedBuildInputs = with pkgs; [ lua luabitop lpeg openssl.dev ];
+    propagatedBuildInputs = with pkgs; [ lua5_1 luabitop lpeg openssl.dev ];
 
     meta = {
       homepage = "https://github.com/leafo/pgmoon";
@@ -270,7 +270,7 @@ let
   };
 in
   {
-    lapis = lua52Packages.buildLuarocksPackage {
+    lapis = lua51Packages.buildLuarocksPackage {
       pname = "lapis";
       name = "lapis";
       version = "1.14.0-1";
@@ -292,7 +292,7 @@ in
       }
       '') ["date" "path"]) ;
 
-      propagatedBuildInputs = with pkgs; with lua52Packages; [ lua argparse ansicolors date etlua loadkit lpeg lua-cjson luaossl luafilesystem luasocket pgmoon ] ++ (with pkgs; [ wget curl ]);
+      propagatedBuildInputs = with pkgs; with lua51Packages; [ lua5_1 argparse ansicolors date etlua loadkit lpeg lua-cjson luaossl luafilesystem luasocket pgmoon ] ++ (with pkgs; [ wget curl ]);
 
       meta = with lib; {
         homepage = "http://leafo.net/lapis";

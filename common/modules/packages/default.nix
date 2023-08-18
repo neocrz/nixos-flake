@@ -8,7 +8,7 @@ in {
     config = mkIf cfg.enable {
       home.packages = with pkgs; [
         # tools
-        bat
+        bat # cat alt
         exa # ls alt
         fd # find alt
         ffmpeg

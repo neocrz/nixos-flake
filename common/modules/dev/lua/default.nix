@@ -6,7 +6,7 @@ let
   luaPkgs = (pkgs.callPackage ./lua.nix {});
 in
 let
-  luaWithPackages = (pkgs.lua5_2.withPackages(ps: with ps // luaPkgs; [
+  luaWithPackages = (pkgs.lua5_1.withPackages(ps: with ps // luaPkgs; [
     # Builtin Lua Packages
     luasocket
     luafilesystem

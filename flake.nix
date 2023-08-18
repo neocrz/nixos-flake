@@ -13,6 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    nix-software-center.url = "github:vlinkz/nix-software-center";
   };
 
   outputs = { self, nixpkgs, home-manager, nix-on-droid, ... }@inputs: {
@@ -32,7 +33,7 @@
               ;
           };
         modules = [
-          ./host/acer/configuration.nix
+          ./host/acer/configuration.nix 
           ./home/acer/conf.nix #system-level casual configs
           home-manager.nixosModules.home-manager
           {
