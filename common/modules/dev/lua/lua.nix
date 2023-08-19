@@ -292,7 +292,7 @@ in
       }
       '') ["date" "path"]) ;
 
-      propagatedBuildInputs = with pkgs; with lua51Packages; [ lua5_1 argparse ansicolors date etlua loadkit lpeg lua-cjson luaossl luafilesystem luasocket pgmoon ] ++ (with pkgs; [ wget curl ]);
+      propagatedBuildInputs = with pkgs; with lua51Packages; [ lua5_1 argparse ansicolors date etlua loadkit lpeg lua-cjson luaossl luafilesystem luasocket pgmoon ] ++ (with pkgs; [ wget curl openresty ]);
 
       meta = with lib; {
         homepage = "http://leafo.net/lapis";

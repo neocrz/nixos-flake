@@ -10,6 +10,7 @@ in {
     ./nix
     ./python
     ./rust
+    ./zig
   ];
 
   options.modules.dev = { enable = mkEnableOption "dev"; };
