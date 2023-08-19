@@ -20,6 +20,7 @@ in {
     modules.dev_nix.enable = true;
     modules.dev_python.enable = true;
     modules.dev_rust.enable = true;
+    modules.dev_zig.enable = true;
   };
   
 }
