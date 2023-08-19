@@ -25,7 +25,7 @@ in {
       # # luaformatter # Lua formatter (currently using this one)
       lua-language-server # Lua LSP
       luajitPackages.luarocks-nix # Package manager for Lua on Nix
-
+      terra
       openresty
     ];
   };
