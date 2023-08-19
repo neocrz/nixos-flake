@@ -12,6 +12,7 @@ in {
       cargo # Downloads your Rust project's dependencies and builds your project
       rustfmt # Formatter for rust language
       rust-analyzer # Lsp for rust
+      clippy # Linter
       # rustup # The Rust toolchain installer
     ];
   };
