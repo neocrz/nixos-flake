@@ -79,6 +79,7 @@ in
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
+  hardware.pulseaudio.support32Bit = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -100,7 +101,7 @@ in
   users.users.${user} = {
     isNormalUser = true;
     description = user;
-    extraGroups = [ "networkmanager" "docker" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "docker" "wheel" "libvirtd" "audio" ];
     packages = with pkgs; [ 
     #  thunderbird
     ];
