@@ -14,6 +14,7 @@ in {
       astyle # Source code indenter, formatter, and beautifier for C, C++, C# and Java
       cpplint # Static code checker for C/C++
       clang-tools 
+      #pkg-config
     ];
   };
 }
