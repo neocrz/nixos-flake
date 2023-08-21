@@ -45,7 +45,6 @@ in {
 
         # GAMES
         grapejuice
-        golly
         lutris
         (retroarch.override {
           cores = with libretro; [

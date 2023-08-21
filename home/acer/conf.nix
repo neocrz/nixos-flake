@@ -1,9 +1,10 @@
 { config, pkgs, lib, inputs, ... }:
+# CONFIGURAÇÕES GERAIS (FORA DO PADRÃO)
 let
   system = "x86_64-linux";
 in
 {
-  # steam
+  # STEAM
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
@@ -18,6 +19,7 @@ in
       });
     })
   ];
+  # PORTAS
   networking.firewall.allowedTCPPortRanges = [
   # KDE Connect
   { from = 1714; to = 1764; }
@@ -28,9 +30,16 @@ in
   ];
    # networking.firewall.enable = false;
 
+  # DNS--
   networking.nameservers = [ "8.8.8.8" "8.8.4.4" ];
 
+  # PACOTES
   environment.systemPackages = with pkgs; [
     inputs.nix-software-center.packages.${system}.nix-software-center
+    pavucontrol
   ];
+
+  # DESATIVANDO WAYLAND (por problemas no OBS, VLC, ... ;_;)
+  services.xserver.displayManager.gdm.wayland = false;
+
 }
