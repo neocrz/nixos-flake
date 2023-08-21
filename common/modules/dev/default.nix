@@ -15,12 +15,12 @@ in {
 
   options.modules.dev = { enable = mkEnableOption "dev"; };
   config = mkIf cfg.enable {
-    modules.dev_c.enable = true;
-    modules.dev_lua.enable = true;
-    modules.dev_nix.enable = true;
-    modules.dev_python.enable = true;
-    modules.dev_rust.enable = true;
-    modules.dev_zig.enable = true;
+    modules.dev_c.enable = false;
+    modules.dev_lua.enable = false;
+    modules.dev_nix.enable = false;
+    modules.dev_python.enable = false;
+    modules.dev_rust.enable = false;
+    modules.dev_zig.enable = false;
   };
   
 }
