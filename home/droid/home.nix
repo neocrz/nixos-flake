@@ -27,7 +27,7 @@ in
 
     ( _:{ # copy my bashrc to be sourced
       home.file.".config/.mybashrc" = {
-      source = ./src/mybashrc;
+      source = ./src/.bashrc;
       recursive = true;
       };
       }

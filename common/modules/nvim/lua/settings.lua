@@ -25,6 +25,7 @@ vim.cmd [[
     set nowritebackup
     set noerrorbells
     set noswapfile
+    set clipboard+=unnamedplus
 ]]
 
 
