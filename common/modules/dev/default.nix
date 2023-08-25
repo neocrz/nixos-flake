@@ -16,7 +16,7 @@ in {
   options.modules.dev = { enable = mkEnableOption "dev"; };
   config = mkIf cfg.enable {
     modules.dev_c.enable = false;
-    modules.dev_lua.enable = false;
+    modules.dev_lua.enable = true;
     modules.dev_nix.enable = false;
     modules.dev_python.enable = false;
     modules.dev_rust.enable = false;

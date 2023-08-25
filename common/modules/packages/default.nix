@@ -16,14 +16,15 @@ in {
         htop
         nano
         neofetch
+        nix-tree
         ripgrep # grep alt
         openssl_legacy
-	      openssh
+	    openssh
         yt-dlp
         wget curl
         zoxide # cd alt
         unzip
-
+        
 	    ];
     };
 }

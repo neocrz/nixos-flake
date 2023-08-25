@@ -3,16 +3,16 @@
 with lib;
 let 
   cfg = config.modules.dev_lua;
-  luaPkgs = (pkgs.callPackage ./lua.nix {});
+  luaVer = pkgs.luajit; #lua5_1
+  luaPkgs = (pkgs.callPackage ./lua.nix { inherit luaVer; });
 in
 let
-  luaWithPackages = (pkgs.lua5_1.withPackages(ps: with ps // luaPkgs; [
+  luaWithPackages = (luaVer.withPackages(ps: with ps // luaPkgs; [
     # Builtin Lua Packages
     luasocket
     luafilesystem
-    moonscript
     lpeg
-    lapis
+    lpath
     ])).override(args: { ignoreCollisions = true; });
 in {
   options.modules.dev_lua = { enable = mkEnableOption "dev_lua"; };
