@@ -1,4 +1,5 @@
 export XDG_DATA_HOME="$HOME/.local/share"
 export LIX_HOME="$HOME/.lix/store"
 eval "$(zoxide init bash)"
-
+alias lix="~/projects/lua/l007-lix/lix.lua"
+alias droid-switch="nix-on-droid -F ~/.dotfiles/. switch"

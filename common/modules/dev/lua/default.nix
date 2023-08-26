@@ -12,7 +12,7 @@ let
     luasocket
     luafilesystem
     lpeg
-    lpath
+    l_penlight
     ])).override(args: { ignoreCollisions = true; });
 in {
   options.modules.dev_lua = { enable = mkEnableOption "dev_lua"; };
