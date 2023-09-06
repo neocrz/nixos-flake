@@ -12,7 +12,6 @@ let
     luasocket
     luafilesystem
     lpeg
-    l_penlight
     ])).override(args: { ignoreCollisions = true; });
 in {
   options.modules.dev_lua = { enable = mkEnableOption "dev_lua"; };
@@ -25,8 +24,6 @@ in {
       # # luaformatter # Lua formatter (currently using this one)
       lua-language-server # Lua LSP
       luajitPackages.luarocks-nix # Package manager for Lua on Nix
-      terra
-      openresty
     ];
   };
 }
