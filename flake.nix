@@ -23,6 +23,15 @@
         allowUnfreePredicate = (_: true);
       };
     };
+    homeConfigurations = {
+      mint = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+	modules = [
+          ./home/mint/home.nix
+        ];
+        # extraSpecialArgs = {inherit inputs;};
+      };
+    };
 
     nixosConfigurations = {
       acer = nixpkgs.lib.nixosSystem {
